@@ -1,0 +1,14 @@
+path: datasets
+
+train: images/train
+val: images/val
+
+names:
+  0: person
+  1: gun
+  2: knife
+  3: elephant
+  4: deer
+  5: tiger
+  6: leopard
+  7: wild_boar

@@ -1,0 +1,5 @@
+names:
+  0: Gun
+  1: Knife
+path: C:\Users\Hp\OneDrive\Desktop\WILD_VISION_PROJECT\datasets\weapon
+val: .\images\val\

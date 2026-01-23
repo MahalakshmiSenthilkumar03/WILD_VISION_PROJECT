@@ -1,0 +1,94 @@
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.stats-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.bg-alert {
+    background: linear-gradient(135deg, #EF5350, #C62828);
+}
+
+.bg-warning {
+    background: linear-gradient(135deg, #FFCA28, #F57C00);
+}
+
+.bg-info {
+    background: linear-gradient(135deg, #42A5F5, #1565C0);
+}
+
+.stats-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    line-height: 1;
+}
+
+.stats-title {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+.stats-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.trend {
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.trend.positive {
+    color: var(--color-success);
+    background: #E8F5E9;
+}
+
+.trend.negative {
+    color: var(--color-alert);
+    background: #FFEBEE;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.status-badge.low {
+    background: #E8F5E9;
+    color: var(--color-success);
+}
+
+.status-badge.high {
+    background: #FFEBEE;
+    color: var(--color-alert);
+}

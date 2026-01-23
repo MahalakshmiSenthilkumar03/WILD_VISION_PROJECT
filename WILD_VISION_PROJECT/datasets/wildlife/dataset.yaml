@@ -1,0 +1,9 @@
+names:
+  0: Elephant
+  1: Tiger
+  2: Lion
+  3: Deer
+  4: Bear
+  5: Person
+path: C:\Users\Hp\OneDrive\Desktop\WILD_VISION_PROJECT\datasets\wildlife
+train: .\images\train\

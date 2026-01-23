@@ -1,0 +1,31 @@
+import winsound   # ← keep this at the top of file
+
+def save_event(frame, label):
+    # 🔊 ALARM SOUND
+    winsound.Beep(2000, 500)
+
+    ts = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    img_path = f"evidence/poaching/{ts}.jpg"
+    cv2.imwrite(img_path, frame)
+
+    event = {
+        "time": ts,
+        "label": label,
+        "camera": CAMERA_NO,
+        "zone": ZONE,
+        "risk": RISK,
+        "location": LOCATION,
+        "image": img_path
+    }
+
+    data = []
+    if os.path.exists("events.json"):
+        with open("events.json") as f:
+            data = json.load(f)
+
+    data.append(event)
+
+    with open("events.json", "w") as f:
+        json.dump(data, f, indent=4)
+
+    print("🚨 POACHING ALERT! ALARM TRIGGERED")

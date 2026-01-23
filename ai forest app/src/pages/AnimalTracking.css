@@ -1,0 +1,255 @@
+/* Existing CSS preserved, adding marker styles */
+
+.tracking-page {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+    gap: 1rem;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #EEE;
+}
+
+.icon-btn-plain {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.status-bar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.status-item {
+    flex: 1;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-sm);
+    min-width: 180px;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.icon-box.blue {
+    background: #42A5F5;
+}
+
+.icon-box.red {
+    background: #EF5350;
+}
+
+.icon-box.green {
+    background: #66BB6A;
+}
+
+.icon-box.gray {
+    background: #BDBDBD;
+}
+
+.map-section {
+    flex: 1;
+    background: #EEE;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    min-height: 400px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.map-toggles {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #DDD;
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    text-align: left;
+    display: block;
+}
+
+.toggle-btn.active-green {
+    background: #E8F5E9;
+    border-color: #4CAF50;
+    color: #2E7D32;
+}
+
+.toggle-btn.active-blue {
+    background: #E3F2FD;
+    border-color: #2196F3;
+    color: #0D47A1;
+}
+
+.toggle-btn.active-red {
+    background: #FFEBEE;
+    border-color: #EF5350;
+    color: #C62828;
+}
+
+.bottom-panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.info-card {
+    padding: 1.5rem;
+}
+
+.ai-card {
+    background: #E3F2FD;
+    border: 1px solid #BBDEFB;
+    padding: 1.5rem;
+}
+
+.ai-badge {
+    background: white;
+    color: #1976D2;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(25, 118, 210, 0.1);
+}
+
+.prediction-list {
+    list-style-type: none;
+    list-style-position: inside;
+    margin-top: 12px;
+    font-weight: 500;
+    color: #0D47A1;
+    line-height: 1.6;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: transform 0.1s, box-shadow 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-action.focus {
+    background: white;
+    border: 1px solid #DDD;
+    color: var(--color-text-main);
+}
+
+.btn-action.alert {
+    background: var(--color-alert);
+    color: white;
+    box-shadow: 0 4px 10px rgba(211, 47, 47, 0.2);
+}
+
+/* Custom Maker Animations */
+.anim-marker-wrap {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anim-marker-wrap.selected .anim-center {
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.8);
+}
+
+.anim-center {
+    background-color: #2196F3;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.anim-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(33, 150, 243, 0.4);
+    animation: ripple-blue 2s infinite;
+    z-index: 1;
+}
+
+@keyframes ripple-blue {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wild Vision Dashboard</title>
+<style>
+body {
+    margin:0;
+    font-family:Segoe UI;
+    background:#e6f7f1;
+}
+nav {
+    background:#020617;
+    color:white;
+    padding:15px;
+    display:flex;
+    gap:30px;
+}
+nav a {
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+}
+.section {
+    padding:20px;
+}
+.card {
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+.hidden { display:none; }
+</style>
+
+<script>
+function show(id){
+    document.querySelectorAll(".section").forEach(s=>s.classList.add("hidden"));
+    document.getElementById(id).classList.remove("hidden");
+}
+
+async function loadEvents(){
+    const res = await fetch("/events");
+    const data = await res.json();
+    const box = document.getElementById("history");
+    box.innerHTML = "";
+    data.reverse().forEach(e=>{
+        box.innerHTML += `
+        <div class="card">
+            <b>${e.animal}</b> | ${e.zone} | ${e.risk}<br>
+            📍 ${e.location}<br>
+            🎥 ${e.camera}<br>
+            🕒 ${e.time}
+        </div>`;
+    });
+}
+setInterval(loadEvents,3000);
+</script>
+</head>
+
+<body>
+<nav>
+    <a onclick="show('live')">Live Monitoring</a>
+    <a onclick="show('history')">Poaching History</a>
+</nav>
+
+<div id="live" class="section">
+    <h2>Live Camera Feed</h2>
+    <img src="/video" width="720">
+</div>
+
+<div id="history" class="section hidden">
+    <h2>Poaching Events</h2>
+</div>
+</body>
+</html>

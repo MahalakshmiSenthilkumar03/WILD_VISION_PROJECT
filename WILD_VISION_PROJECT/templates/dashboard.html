@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wild Vision Dashboard</title>
+
+<style>
+body {
+    margin: 0;
+    background: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background: #020617;
+    padding: 15px;
+    display: flex;
+    gap: 25px;
+    font-size: 18px;
+}
+
+section {
+    padding: 20px;
+}
+
+.card {
+    background: #020617;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+img {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    🌿 <b>Wild Vision</b>
+    <span>Live Monitoring</span>
+    <span>Poaching History</span>
+</nav>
+
+<section>
+<h2>📹 Live Camera</h2>
+<img src="http://127.0.0.1:8000/video" width="640">
+</section>
+
+<section>
+<h2>🚨 Poaching Alerts</h2>
+
+{% for a in alerts %}
+<div class="card">
+<b>🕒 Time:</b> {{a[1]}}<br>
+<b>🐾 Animal:</b> {{a[2]}}<br>
+<b>🌲 Zone:</b> {{a[3]}}<br>
+<b>📷 Camera:</b> {{a[4]}}<br>
+<b>📍 Location:</b> {{a[5]}}, {{a[6]}}<br>
+<img src="{{a[7]}}" width="300">
+</div>
+{% endfor %}
+
+</section>
+
+</body>
+</html>
