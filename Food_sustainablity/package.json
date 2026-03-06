@@ -1,0 +1,14 @@
+{
+  "name": "wasteless-grid-root",
+  "version": "1.0.0",
+  "description": "Root script to start WasteLess Grid Backend, ML Service, and Flutter UI locally",
+  "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-ml\" \"npm run start-ui\"",
+    "start-backend": "cd backend-service && npx nodemon index.js",
+    "start-ml": "cd ml-service && pip install -r requirements.txt && python main.py",
+    "start-ui": "cd mobile-app && C:\\src\\flutter\\bin\\flutter.bat run -d chrome --web-port 3000"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

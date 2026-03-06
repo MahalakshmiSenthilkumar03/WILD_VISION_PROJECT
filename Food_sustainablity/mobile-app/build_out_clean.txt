@@ -1,0 +1,27 @@
+﻿Compiling lib\main.dart for the Web...                          
+C:\flutter\bin\flutter.bat : Wasm dry 
+run succeeded. Consider building and 
+testing your application with the 
+`--wasm` flag. See docs for more info: ht
+tps://docs.flutter.dev/platform-integrati
+on/web/wasm
+At line:1 char:1
++ C:\flutter\bin\flutter.bat build web > 
+build_out_current.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecifi 
+   ed: (Wasm dry run su...ration/web/wa  
+  sm:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeComm 
+   andError
+ 
+Use --no-wasm-dry-run to disable these 
+warnings.
+Error: unable to find directory entry in 
+pubspec.yaml: C:\AI\Food_sustainablity\mo
+bile-app\assets\images\
+Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 14800 bytes (99.1% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib\main.dart for the Web...                             51.3s
+ΓêÜ Built build\web

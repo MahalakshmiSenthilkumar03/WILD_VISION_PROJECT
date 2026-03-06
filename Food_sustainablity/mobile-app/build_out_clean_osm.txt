@@ -1,0 +1,296 @@
+﻿Resolving dependencies...
+Downloading packages...
+  flutter_lints 2.0.3 (6.0.0 available)
++ flutter_map 6.2.1 (8.2.2 available)
++ latlong2 0.9.1
+  lints 2.1.1 (6.1.0 available)
++ lists 1.0.1
++ logger 2.6.2
+  meta 1.17.0 (1.18.1 available)
++ mgrs_dart 2.0.0 (3.0.0 available)
++ polylabel 1.0.1
++ proj4dart 2.1.0 (3.0.0 available)
++ unicode 0.3.1 (1.1.9 available)
++ wkt_parser 2.0.0
+These packages are no longer being depended on:
+- csslib 1.0.2
+- google_maps 8.2.0
+- google_maps_flutter 2.14.2
+- google_maps_flutter_android 2.19.2
+- google_maps_flutter_ios 2.17.5
+- google_maps_flutter_platform_interface 2.14.2
+- google_maps_flutter_web 0.5.14+3
+- html 0.15.6
+- sanitize_html 2.1.0
+- stream_transform 2.1.1
+Changed 19 dependencies!
+7 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Compiling lib\main.dart for the Web...                          
+C:\flutter\bin\flutter.bat : Unexpected 
+wasm dry run failure (255):
+At line:1 char:1
++ C:\flutter\bin\flutter.bat build web > 
+build_out_osm.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecifi 
+   ed: (Unexpected wasm dry run failure  
+   (255)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeComm 
+   andError
+ 
+
+Unhandled exception:
+Unsupported operation: Cannot extract a 
+file path from a 
+org-dartlang-untranslatable-uri URI
+#0      _Uri.toFilePath 
+(dart:core/uri.dart:3432)
+#1      DryRunSummarizer._lintChecks 
+(package:dart2wasm/dry_run.dart:167)
+#2      DryRunSummarizer.summarize 
+(package:dart2wasm/dry_run.dart:236)
+#3      _runCfePhase 
+(package:dart2wasm/compile.dart:355)
+<asynchronous suspension>
+#4      compile 
+(package:dart2wasm/compile.dart:222)
+<asynchronous suspension>
+#5      generateWasm 
+(package:dart2wasm/generate_wasm.dart:63)
+<asynchronous suspension>
+#6      main (file:///C:/b/s/w/ir/x/w/sdk
+/pkg/dart2wasm/bin/dart2wasm.dart:10)
+<asynchronous suspension>
+
+Use --no-wasm-dry-run to disable these 
+warnings.
+Target dart2js failed: ProcessException: 
+Process exited abnormally with exit code 
+1:
+Error: Couldn't resolve the package 
+'google_maps_flutter_web' in 'package:goo
+gle_maps_flutter_web/google_maps_flutter_
+web.dart'.
+.dart_tool/flutter_build/fbf9961935076fbb
+678d0384f8255bce/web_plugin_registrant.da
+rt:9:8:
+Error: Not found: 'package:google_maps_fl
+utter_web/google_maps_flutter_web.dart'
+import 'package:google_maps_flutter_web/g
+oogle_maps_flutter_web.dart';
+       ^
+lib/screens/admin_dashboard.dart:3:8:
+Error: Error when reading '/C:/Users/Hp/A
+ppData/Local/Pub/Cache/hosted/pub.dev/lat
+long2-0.9.1/lib/latlong2.dart': Error 
+reading '/C:/Users/Hp/AppData/Local/Pub/C
+ache/hosted/pub.dev/latlong2-0.9.1/lib/la
+tlong2.dart'  (The system cannot find 
+the file specified)
+import 'package:latlong2/latlong2.dart';
+       ^
+lib/screens/map_tracking_screen.dart:3:8:
+Error: Error when reading '/C:/Users/Hp/A
+ppData/Local/Pub/Cache/hosted/pub.dev/lat
+long2-0.9.1/lib/latlong2.dart': Error 
+reading '/C:/Users/Hp/AppData/Local/Pub/C
+ache/hosted/pub.dev/latlong2-0.9.1/lib/la
+tlong2.dart'  (The system cannot find 
+the file specified)
+import 'package:latlong2/latlong2.dart';
+       ^
+lib/screens/admin_dashboard.dart:14:16:
+Error: Type 'LatLng' not found.
+  static const LatLng _center = 
+LatLng(11.0168, 76.9558);
+               ^^^^^^
+lib/screens/map_tracking_screen.dart:17:8
+:
+Error: Type 'LatLng' not found.
+  late LatLng _donorLatLng;
+       ^^^^^^
+lib/screens/map_tracking_screen.dart:18:8
+:
+Error: Type 'LatLng' not found.
+  late LatLng _ngoLatLng;
+       ^^^^^^
+lib/screens/admin_dashboard.dart:14:33:
+Error: Method not found: 'LatLng'.
+  static const LatLng _center = 
+LatLng(11.0168, 76.9558);
+                                ^^^^^^
+.dart_tool/flutter_build/fbf9961935076fbb
+678d0384f8255bce/web_plugin_registrant.da
+rt:16:3:
+Error: Undefined name 'GoogleMapsPlugin'.
+  
+GoogleMapsPlugin.registerWith(registrar);
+  ^^^^^^^^^^^^^^^^
+lib/screens/admin_dashboard.dart:14:16:
+Error: 'LatLng' isn't a type.
+  static const LatLng _center = 
+LatLng(11.0168, 76.9558);
+               ^^^^^^
+lib/screens/admin_dashboard.dart:17:25:
+Error: Method not found: 'LatLng'.
+    const Marker(point: LatLng(11.0168, 
+76.9558), width: 30, height: 30, child: 
+Icon(Icons.location_on, color: 
+Colors.blue, size: 30)),
+                        ^^^^^^
+lib/screens/admin_dashboard.dart:18:25:
+Error: Method not found: 'LatLng'.
+    const Marker(point: LatLng(11.0250, 
+76.9650), width: 30, height: 30, child: 
+Icon(Icons.location_on, color: 
+Colors.blue, size: 30)),
+                        ^^^^^^
+lib/screens/admin_dashboard.dart:19:25:
+Error: Method not found: 'LatLng'.
+    const Marker(point: LatLng(11.0350, 
+76.9750), width: 30, height: 30, child: 
+Icon(Icons.location_on, color: 
+Colors.blue, size: 30)),
+                        ^^^^^^
+lib/screens/map_tracking_screen.dart:17:8
+:
+Error: 'LatLng' isn't a type.
+  late LatLng _donorLatLng;
+       ^^^^^^
+lib/screens/map_tracking_screen.dart:18:8
+:
+Error: 'LatLng' isn't a type.
+  late LatLng _ngoLatLng;
+       ^^^^^^
+lib/screens/map_tracking_screen.dart:38:2
+0:
+Error: The method 'LatLng' isn't defined 
+for the type '_MapTrackingScreenState'.
+ - '_MapTrackingScreenState' is from 'pac
+kage:wasteless_grid/screens/map_tracking_
+screen.dart' 
+('lib/screens/map_tracking_screen.dart').
+    _donorLatLng = LatLng(dLat, dLng);
+                   ^^^^^^
+lib/screens/map_tracking_screen.dart:39:1
+8:
+Error: The method 'LatLng' isn't defined 
+for the type '_MapTrackingScreenState'.
+ - '_MapTrackingScreenState' is from 'pac
+kage:wasteless_grid/screens/map_tracking_
+screen.dart' 
+('lib/screens/map_tracking_screen.dart').
+    _ngoLatLng = LatLng(nLat, nLng);
+                 ^^^^^^
+Error: Compilation failed.
+  Command: C:\flutter\bin\cache\dart-sdk\
+bin\dart.exe compile js --platform-binari
+es=C:\flutter\bin\cache\flutter_web_sdk\k
+ernel --invoker=flutter_tool 
+-Ddart.vm.product=true 
+-DFLUTTER_VERSION=3.41.4 
+-DFLUTTER_CHANNEL=stable -DFLUTTER_GIT_UR
+L=https://github.com/flutter/flutter.git 
+-DFLUTTER_FRAMEWORK_REVISION=ff37bef603 
+-DFLUTTER_ENGINE_REVISION=e4b8dca3f1 
+-DFLUTTER_DART_VERSION=3.11.1 
+-DFLUTTER_WEB_USE_SKIA=true 
+-DFLUTTER_WEB_USE_SKWASM=false -DFLUTTER_
+WEB_CANVASKIT_URL=https://www.gstatic.com
+/flutter-canvaskit/e4b8dca3f1b4ede4c30371
+002441c88c12187ed6/ 
+--native-null-assertions 
+--no-source-maps -O4 --minify -o C:\AI\Fo
+od_sustainablity\mobile-app\.dart_tool\fl
+utter_build\fbf9961935076fbb678d0384f8255
+bce\app.dill --packages=C:\AI\Food_sustai
+nablity\mobile-app\.dart_tool\package_con
+fig.json --cfe-only C:\AI\Food_sustainabl
+ity\mobile-app\.dart_tool\flutter_build\f
+bf9961935076fbb678d0384f8255bce\main.dart
+#0      RunResult.throwException (package
+:flutter_tools/src/base/process.dart:153:
+5)
+#1      _DefaultProcessUtils.run (package
+:flutter_tools/src/base/process.dart:379:
+19)
+<asynchronous suspension>
+#2      Dart2JSTarget.build (package:flut
+ter_tools/src/build_system/targets/web.da
+rt:208:5)
+<asynchronous suspension>
+#3      _BuildInstance._invokeInternal (p
+ackage:flutter_tools/src/build_system/bui
+ld_system.dart:937:9)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> 
+(dart:async/future.dart:546:21)
+<asynchronous suspension>
+#5      _BuildInstance.invokeTarget (pack
+age:flutter_tools/src/build_system/build_
+system.dart:875:32)
+<asynchronous suspension>
+#6      Future.wait.<anonymous closure> 
+(dart:async/future.dart:546:21)
+<asynchronous suspension>
+#7      _BuildInstance.invokeTarget (pack
+age:flutter_tools/src/build_system/build_
+system.dart:875:32)
+<asynchronous suspension>
+#8      FlutterBuildSystem.build (package
+:flutter_tools/src/build_system/build_sys
+tem.dart:684:16)
+<asynchronous suspension>
+#9      WebBuilder.buildWeb (package:flut
+ter_tools/src/web/compile.dart:107:34)
+<asynchronous suspension>
+#10     BuildWebCommand.runCommand (packa
+ge:flutter_tools/src/commands/build_web.d
+art:300:5)
+<asynchronous suspension>
+#11     FlutterCommand.run.<anonymous 
+closure> (package:flutter_tools/src/runne
+r/flutter_command.dart:1590:27)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous 
+closure> (package:flutter_tools/src/base/
+context.dart:154:19)
+<asynchronous suspension>
+#13     CommandRunner.runCommand 
+(package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand.<
+anonymous closure> (package:flutter_tools
+/src/runner/flutter_command_runner.dart:4
+96:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous 
+closure> (package:flutter_tools/src/base/
+context.dart:154:19)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand (
+package:flutter_tools/src/runner/flutter_
+command_runner.dart:431:5)
+<asynchronous suspension>
+#17     
+FlutterCommandRunner.run.<anonymous 
+closure> (package:flutter_tools/src/runne
+r/flutter_command_runner.dart:307:33)
+<asynchronous suspension>
+#18     run.<anonymous 
+closure>.<anonymous closure> (package:flu
+tter_tools/runner.dart:104:11)
+<asynchronous suspension>
+#19     AppContext.run.<anonymous 
+closure> (package:flutter_tools/src/base/
+context.dart:154:19)
+<asynchronous suspension>
+#20     main (package:flutter_tools/execu
+table.dart:103:3)
+<asynchronous suspension>
+
+Compiling lib\main.dart for the Web...                             11.9s
+Error: Failed to compile application for 
+the Web.
